@@ -1,6 +1,6 @@
 # JSP-study
 Velocity模块 --- JSP 
-#### JSP el表达式
+#### 一、JSP el表达式
 ```
 1、语法结构
      ${expression}
@@ -12,7 +12,7 @@ Velocity模块 --- JSP
          ${sessionScope.user[data]}中data 是一个变量
 3、变量
      EL存取变量数据的方法很简单，例如：${username}。它的意思是取出某一范围中名称为username的变量。
-     因为我们并没有指定哪一个范围的username，所以它会依序从Page、Request、Session、Application范围查找。
+     因为我们并没有指定哪一个范围的username，所以它会依序从Page < Request < Session < Application范围查找。
      假如途中找到username，就直接回传，不再继续找下去，但是假如全部的范围都没有找到时，就回传null。
      属性范围在EL中的名称
          Page          PageScope
@@ -20,7 +20,7 @@ Velocity模块 --- JSP
          Session          SessionScope
          Application      ApplicationScope
 ```
-#### javaWeb 四种范围
+#### 二、javaWeb 四种范围
 ```
 1.简单说 page指当前页面。在一个jsp页面里有效 
 2.request 指从http请求到服务器处理结束，返回响应的整个过程。
